@@ -2,23 +2,25 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-    static String[] mas= new String[5];
-    static Scanner sc = new Scanner(System.in);
+
+    private String[] mas= new String[5];
 
     public static void main(String[] args) {
-        Masyvas();
-        Rasymas();
+        Main objektas = new Main();
+        objektas.Masyvas();
+        objektas.Rasymas();
     }
 
-    public static void Masyvas(){
-
+    public void Masyvas(){
+        Scanner sc = new Scanner(System.in);
+        mas = new String[5];
         for (int i=0; i<mas.length; i++){
             System.out.println("Iveskite zodi: ");
             mas[i]=sc.nextLine();
         }
     }
 
-    public static void Rasymas(){
+    public void Rasymas(){
         for (int i=0; i<mas.length; i++){
             System.out.println("Masyvo " + i + " zodis yra "+mas[i]);
         }
